@@ -188,7 +188,14 @@ footer button:hover {
 }
 .stair5 {
   margin-top: 8rem;
+  border-right: 2px solid #000;
+  padding-right: 1.5rem;
 }
+
+.stair6 {
+  margin-top: 10rem;
+}
+
 .fa-comment-dots {
   font-size: 2rem;
 }
@@ -435,7 +442,11 @@ td {
     margin: 0;
     gap: none;
   }
-  .stair1, .stair2, .stair3, .stair4, .stair5{
+  .stair1,
+  .stair2,
+  .stair3,
+  .stair4,
+  .stair5 {
     margin: 0;
     display: inline-block;
     padding: 0;

@@ -1,51 +1,6 @@
-const navBar = document.body.querySelector(".nav-bar");
-
-const sliderImage = document.body.querySelector(".slider-image");
-const arrowLeft = document.body.querySelector(".fa-circle-chevron-left");
-const arrowRight = document.body.querySelector(".fa-circle-chevron-right");
-const footer = document.body.querySelector("footer");
-const chatIcon = document.body.querySelector(".chat-icon");
-const chatBox = document.body.querySelector(".chat-box");
-const ticket = document.body.querySelector(".ticket");
-const images = ["conor.jpg", "alex.jpg", "jorge.webp", "nate.jpg"];
-
-let counter = 0;
-if (chatIcon) {
-  chatIcon.addEventListener("click", function () {
-    chatBox.classList.toggle("display-block");
-  });
-}
-
-if (ticket) {
-  const btns = ticket.querySelectorAll("button");
-  btns.forEach((btn) => {
-    btn.addEventListener("click", function () {
-      alert("Your ticket has been purchased");
-    });
-  });
-}
-
-if (arrowLeft) {
-  arrowRight.addEventListener("click", function () {
-    if (counter === images.length - 1) {
-      counter = 0;
-      sliderImage.src = `../images/${images[counter]}`;
-      return;
-    }
-    counter += 1;
-    sliderImage.src = `../images/${images[counter]}`;
-  });
-  arrowLeft.addEventListener("click", function () {
-    if (counter === 0) {
-      counter = images.length - 1;
-      sliderImage.src = `../images/${images[counter]}`;
-      return;
-    }
-    counter -= 1;
-    sliderImage.src = `../images/${images[counter]}`;
-  });
-}
-
+import getElement from "./getElement.js";
+let navBar = getElement(".nav-bar");
+let footer = getElement("footer");
 navBar.innerHTML = `
     <ul>
         <a href="./index.html"><li>home</li></a>
@@ -114,9 +69,3 @@ footer.innerHTML = `
         <button type="submit">submit</button>
       </form>
 `;
-const navBtn = document.body.querySelector(".nav-btn");
-
-const smallNav = document.body.querySelector(".small-nav");
-navBtn.addEventListener("click", () => {
-  smallNav.classList.toggle("display-flex");
-});

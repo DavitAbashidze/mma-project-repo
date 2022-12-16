@@ -469,3 +469,20 @@ td {
 .display-flex {
   display: flex;
 }
+.dropdown {
+  width: 16rem;
+  position: fixed;
+  display: none;
+  z-index: 10;
+  box-shadow: 2px 4px 10px #000;
+}
+.dropdown button {
+  border: none;
+  background-color: #bbb;
+  text-transform: uppercase;
+  line-height: 3rem;
+}
+.dropdown button:hover {
+  cursor: pointer;
+  background-color: #aaa;
+}

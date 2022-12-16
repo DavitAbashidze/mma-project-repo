@@ -1,10 +1,8 @@
-import getElement from "./getElement.js";
-let navBar = getElement(".nav-bar");
-let footer = getElement("footer");
+import { navBar, footer } from "./domElements.js";
 navBar.innerHTML = `
     <ul>
         <a href="./index.html"><li>home</li></a>
-        <a class = "dropdown-trigger" href="./chat.html"><li>rankings <i style ="display:none;"  class="fa-solid fa-chevron-up"></i><i class="fa-solid fa-chevron-down"></i></li></a>
+        <a class = "dropdown-trigger" href="./chat.html"><li>rankings <i style ="display:none;" class="fa-solid fa-chevron-up"></i><i class="fa-solid fa-chevron-down"></i></li></a>
         <a href="./shops.html"><li>ticket</li></a>
         <a href="./slider.html"><li>events</li></a>
         <a href="./about.html"><li>about</li></a>

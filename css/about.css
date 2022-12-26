@@ -1,0 +1,12 @@
+.about {
+  text-align: center;
+  width: 70%;
+  margin: 0 auto;
+}
+.about h1 {
+  text-transform: uppercase;
+}
+.about p {
+  font-family: cursive;
+  background-color: #ffe128;
+}

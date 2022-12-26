@@ -1,0 +1,43 @@
+.slider {
+  position: relative;
+}
+.slider-image {
+  width: 100vw;
+  height: 56.25vw;
+  overflow: hidden;
+  object-fit: fill;
+}
+.fa-circle-chevron-left {
+  font-size: 2rem;
+  position: absolute;
+  display: block;
+  color: #ddd;
+  top: calc(28.125vw - 1rem);
+  right: 95%;
+}
+.fa-circle-chevron-right {
+  font-size: 2rem;
+  position: absolute;
+  top: calc(28.125vw - 1rem);
+  display: block;
+  color: #ddd;
+  left: 95%;
+}
+.fa-circle-chevron-left:hover,
+.fa-circle-chevron-right:hover {
+  color: #bbb;
+}
+.video-container-title {
+  margin-left: 1.125rem;
+  line-height: 2rem;
+}
+.video-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1vw;
+  margin: 0 1vw;
+}
+.video-container iframe {
+  width: 32vw;
+  height: 18vw;
+}

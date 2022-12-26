@@ -1,15 +1,30 @@
-const navBar = document.body.querySelector(".nav-bar");
-const sliderImage = document.body.querySelector(".slider-image");
-const arrowLeft = document.body.querySelector(".fa-circle-chevron-left");
-const arrowRight = document.body.querySelector(".fa-circle-chevron-right");
-const footer = document.body.querySelector("footer");
-const chatIcon = document.body.querySelector(".chat-icon");
-const chatBox = document.body.querySelector(".chat-box");
-const ticket = document.body.querySelector(".ticket");
-const rankings = [...document.body.querySelectorAll(".dropdown-trigger")];
-const arrowUp = document.querySelector(".fa-chevron-up");
-const arrowDown = document.querySelector(".fa-chevron-down");
-const dropdown = document.querySelector(".dropdown");
+import $ from "./getElement.js";
+
+const navBar = $(".nav-bar");
+const sliderImage = $(".slider-image");
+const arrowLeft = $(".fa-circle-chevron-left");
+const arrowRight = $(".fa-circle-chevron-right");
+const footer = $("footer");
+const chatIcon = $(".chat-icon");
+const chatBox = $(".chat-box");
+const ticket = $(".ticket");
+const arrowUp = $(".fa-chevron-up");
+const arrowDown = $(".fa-chevron-down");
+const dropdown = $(".dropdown");
+const value = $(".user-title");
+const picture = $(".user-img");
+const title = $(".user-value");
+const trigger = $(".dropdown-trigger");
+const loginForm = $(".login-form");
+const loginMail = $(".login-mail");
+const loginPassword = $(".login-password");
+const loginBtn = $(".login-btn");
+const registerShowHide = $(".register-show-hide");
+const loginShowHide = $(".login-show-hide");
+const registerMail = $(".register-mail");
+const registerForm = $(".register-formS");
+const registerPassword = $(".register-password");
+const registerBtn = $(".register-btn");
 export {
   ticket,
   chatBox,
@@ -19,8 +34,21 @@ export {
   arrowRight,
   sliderImage,
   navBar,
-  rankings,
+  trigger,
   arrowDown,
   arrowUp,
   dropdown,
+  value,
+  picture,
+  title,
+  loginPassword,
+  registerShowHide,
+  loginShowHide,
+  registerBtn,
+  registerMail,
+  registerForm,
+  registerPassword,
+  loginBtn,
+  loginMail,
+  loginForm,
 };

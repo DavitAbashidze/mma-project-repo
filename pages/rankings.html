@@ -2,6 +2,7 @@
 <html lang="en">
   <head>
     <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="../css/rankings.css" />
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -12,7 +13,48 @@
     ></script>
   </head>
   <body>
-    <nav class="nav-bar"></nav>
+    <nav class="nav-bar">
+      <div class="big-screen-nav">
+        <a href="./index.html">home</a>
+        <a class="dropdown-trigger" href="./rankings.html">
+          rankings <i style="display: none" class="fa-solid fa-chevron-up"></i
+          ><i class="fa-solid fa-chevron-down"></i>
+
+          <div class="dropdown">
+            <button>flyweight</button><button>bantamweight</button
+            ><button>featherweight</button><button>lightweight</button
+            ><button>welterweight</button><button>middleweight</button
+            ><button>light heavyweight</button><button>heavyweight</button>
+          </div>
+        </a>
+        <a href="./ticket.html">ticket</a>
+        <a href="./events.html">events</a>
+        <a href="./about.html">about</a>
+        <a href="./contact.html">contact</a>
+      </div>
+      <!-- <div class="small-nav-container">
+        <button class="nav-btn"><i class="fa-solid fa-bars"></i></button>
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <div class="small-nav">
+          <a href="./index.html">home</a>
+          <a class="dropdown-trigger" href="./chat.html">
+            rankings
+            <i style="display: none" class="fa-solid fa-chevron-up"></i
+            ><i class="fa-solid fa-chevron-down"></i
+          ></a>
+          <a href="./shops.html">ticket</a>
+          <a href="./slider.html">events</a>
+          <a href="./about.html">about</a>
+          <a href="./contact.html">contact</a>
+        </div>
+      </div> -->
+      <!-- <form>
+        <input type="text" placeholder="Search..." />
+        <button class="search-btn" type="submit">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+      </form> -->
+    </nav>
 
     <table class="rankings">
       <tr>
@@ -107,7 +149,7 @@
       </tr>
       <tr>
         <td>10</td>
-        <td>jiri prochazka</td>
+        <td>jri prochazka</td>
         <td>29-<span class="red">3</span>-1</td>
         <td>13</td>
         <td>light heavyweight</td>
@@ -149,7 +191,21 @@
       </div>
     </div>
 
-    <footer></footer>
+    <footer>
+      <div class="footer-nav">
+        <a href="./index.html">home</a>
+        <a href="./rankings.html">rankings</a>
+        <a href="./ticket.html">tickets</a>
+        <a href="./events.html">events</a>
+        <a href="./about.html">about</a>
+        <a href="./contact.html">contact</a>
+      </div>
+      <form class="footer-form">
+        <input type="text" placeholder="enter your name.." />
+        <input type="email" placeholder="enter your email.." />
+        <textarea placeholder="write your message here!"></textarea>
+      </form>
+    </footer>
 
     <script type="module" src="../javascript/index.js"></script>
   </body>

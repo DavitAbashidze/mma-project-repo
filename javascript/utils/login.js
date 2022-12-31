@@ -5,7 +5,7 @@ if (loginShowHide && loginPassword) {
     if (loginPassword.type === "password") {
       loginPassword.type = "text";
     } else {
-      loginPassword.type = "passdword";
+      loginPassword.type = "password";
     }
   });
 }

@@ -22,10 +22,22 @@ const loginBtn = $(".login-btn");
 const registerShowHide = $(".register-show-hide");
 const loginShowHide = $(".login-show-hide");
 const registerMail = $(".register-mail");
-const registerForm = $(".register-formS");
+const registerForm = $(".register-form");
 const registerPassword = $(".register-password");
 const registerBtn = $(".register-btn");
+const registerName = $(".register-name");
+const confirm = $(".confirm-password");
+const warning = $(".warning");
+const emptyInputWarning = $(".empty-input-warning");
+const recieveEmail = $("#recieve-emails");
+const agreement = $("#agreement");
 export {
+  agreement,
+  recieveEmail,
+  emptyInputWarning,
+  warning,
+  confirm,
+  registerName,
   ticket,
   chatBox,
   chatIcon,

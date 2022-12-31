@@ -13,28 +13,29 @@ section {
 }
 .section-center {
   background-color: rgb(195, 140, 0);
-  min-height: 20rem;
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-  justify-content: center;
+  min-height: 16rem;
   min-width: 25rem;
   width: 50vh;
-  gap: 2rem;
+  box-shadow: 0 0 1rem #000;
 }
 form {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-  justify-content: space-evenly;
-  gap: 1rem;
-  align-items: center;
   position: relative;
 }
-input {
-  height: 3rem;
+.text-inputs input {
   width: 90%;
+  display: block;
+  margin: 1rem auto;
+  height: 2.5rem;
   border-radius: 0.5rem;
+}
+.check-inputs input,
+.check-inputs label {
+  display: inline-block;
+  margin: 0 0.5rem;
+}
+.check-inputs {
+  margin: 1rem;
+  text-transform: capitalize;
 }
 button {
   width: 60%;
@@ -45,6 +46,8 @@ button {
   font-size: 2rem;
   text-transform: uppercase;
   font-weight: bolder;
+  display: block;
+  margin: 0 auto;
 }
 button:hover {
   background-color: #222;
@@ -54,10 +57,29 @@ button:hover {
 }
 p {
   text-align: center;
+  margin: 1rem;
 }
 .register-show-hide,
 .login-show-hide {
   height: 1rem;
-  position: relative;
-  left: -42%;
+}
+.warning {
+  text-align: left;
+  margin: 0;
+  font-size: 1.125rem;
+  font-weight: bolder;
+  text-shadow: 2px 4px 1rem #f00;
+  color: #742d21;
+  display: none;
+}
+.empty-input-warning {
+  margin-top: 0.5rem;
+  color: rgb(14, 56, 14);
+  font-weight: bolder;
+  font-size: 1.125rem;
+  text-shadow: 2px 4px 0.5rem rgb(14, 56, 14);
+  text-decoration: underline;
+}
+.block {
+  display: block;
 }

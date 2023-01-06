@@ -57,6 +57,55 @@ if (registerShowHide && registerPassword) {
       warning.classList.add("block");
     } else {
       warning.classList.remove("block");
+      if (
+        !user.name ||
+        !user.login ||
+        !user.confirmPassword ||
+        !user.password ||
+        !user.userAgreement ||
+        !user.userRecieveEmail
+      ) {
+        if (!user.name) {
+          emptyInputWarning.textContent = "please write your name!";
+        }
+        if (!user.login) {
+          emptyInputWarning.textContent = "please write your login!";
+        }
+        if (!user.password) {
+          emptyInputWarning.textContent = "please write your password!";
+        }
+        if (!user.confirmPassword) {
+          emptyInputWarning.textContent = "please confirm your password! ";
+        }
+        if (!user.userAgreement) {
+          emptyInputWarning.textContent =
+            "you need to agree to the user agreement!";
+        }
+        if (!user.userRecieveEmail) {
+          emptyInputWarning.textContent = "you need to recieve emails!";
+        }
+      } else {
+        emptyInputWarning.textContent = "";
+        let localUsers = JSON.parse(localStorage.getItem("users"));
+        let users = [];
+        if (!localUsers) {
+          users.push(user);
+          localStorage.setItem("users", JSON.stringify(users));
+          localStorage.setItem("logged-in", "true");
+          window.location.href = "/pages/index.html";
+        } else if (
+          localUsers.some((localUser) => {
+            return localUser.login === user.login;
+          })
+        ) {
+          emptyInputWarning.textContent = "user already exist!";
+        } else {
+          users = [...JSON.parse(localStorage.getItem("users")), user];
+          localStorage.setItem("users", JSON.stringify(users));
+          localStorage.setItem("logged-in", "true");
+          window.location.href = "/pages/index.html";
+        }
+      }
     }
   });
 }

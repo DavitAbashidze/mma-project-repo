@@ -74,10 +74,10 @@ p {
 }
 .empty-input-warning {
   margin-top: 0.5rem;
-  color: rgb(14, 56, 14);
+  color: rgb(198, 54, 14);
   font-weight: bolder;
   font-size: 1.125rem;
-  text-shadow: 2px 4px 0.5rem rgb(14, 56, 14);
+  text-shadow: 2px 4px 0.5rem rgb(198, 54, 14);
   text-decoration: underline;
 }
 .block {

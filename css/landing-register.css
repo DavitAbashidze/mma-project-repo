@@ -83,3 +83,11 @@ p {
 .block {
   display: block;
 }
+.login-warning {
+  text-align: center;
+  margin: 0;
+  color: #742d21;
+  font-weight: bolder;
+  text-shadow: 2px 4px 1rem #f00;
+  margin-bottom: 0.5rem;
+}

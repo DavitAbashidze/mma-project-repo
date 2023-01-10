@@ -31,11 +31,13 @@ const warning = $(".warning");
 const emptyInputWarning = $(".empty-input-warning");
 const recieveEmail = $("#recieve-emails");
 const agreement = $("#agreement");
+const loginWarning = $(".login-warning");
 export {
   agreement,
   recieveEmail,
   emptyInputWarning,
   warning,
+  loginWarning,
   confirm,
   registerName,
   ticket,

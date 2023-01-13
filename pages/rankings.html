@@ -55,108 +55,45 @@
         </button>
       </form> -->
     </nav>
-
-    <table class="rankings">
-      <tr>
-        <th><span class="black">rank</span></th>
-        <th><span class="black">fighter</span></th>
-        <th><span class="black">record</span></th>
-        <th><span class="black">win streak</span></th>
-        <th><span class="black">weight class</span></th>
-        <th><span class="black">status</span></th>
-        <th><span class="black">next fight</span></th>
-      </tr>
-      <tr>
-        <td>1</td>
-        <td>alexander volkanovski</td>
-        <td>25-<span class="red">1</span></td>
-        <td>22</td>
-        <td>featherweight</td>
-        <td><span class="champ">featherweight champion</span></td>
-        <td>-</td>
-      </tr>
-      <tr>
-        <td>2</td>
-        <td>israel adesanya</td>
-        <td>23-<span class="red">1</span></td>
-        <td>3</td>
-        <td>middleweight</td>
-        <td><span class="champ">middleweight champion</span></td>
-        <td>alex pereira</td>
-      </tr>
-      <tr>
-        <td>3</td>
-        <td>charles oliveira</td>
-        <td>33-<span class="red">8</span><span class="n-c">(1NC)</span></td>
-        <td>11</td>
-        <td>lightweight</td>
-        <td>#1 in lightweight rankings</td>
-        <td>-</td>
-      </tr>
-      <tr>
-        <td>4</td>
-        <td>kamaru usman</td>
-        <td>20-<span class="red">2</span></td>
-        <td>0</td>
-        <td>welterweight</td>
-        <td>#1 in welterweight rankings</td>
-        <td>-</td>
-      </tr>
-      <tr>
-        <td>5</td>
-        <td>francis ngannou</td>
-        <td>17-<span class="red">3</span></td>
-        <td>6</td>
-        <td>heavyweight</td>
-        <td><span class="champ">heavyweight champion</span></td>
-        <td>-</td>
-      </tr>
-      <tr>
-        <td>6</td>
-        <td>leon edwards</td>
-        <td>20-<span class="red">3</span><span class="n-c">(1NC)</span></td>
-        <td>2</td>
-        <td>welterweight</td>
-        <td><span class="champ">welterweight champion</span></td>
-        <td>-</td>
-      </tr>
-      <tr>
-        <td>7</td>
-        <td>aljamain sterling</td>
-        <td>21-<span class="red">3</span></td>
-        <td>7</td>
-        <td>bantamweight</td>
-        <td><span class="champ">bantamweight champion</span></td>
-        <td>T.J Dillashaw</td>
-      </tr>
-      <tr>
-        <td>8</td>
-        <td>dustin porier</td>
-        <td>28-<span class="red">7</span><span class="n-c">(1NC)</span></td>
-        <td>0</td>
-        <td>lightweight</td>
-        <td>#2 in lightweight rankings</td>
-        <td>michael chandler</td>
-      </tr>
-      <tr>
-        <td>9</td>
-        <td>deiveson figueredo</td>
-        <td>21-<span class="red">2</span>-1</td>
-        <td>1</td>
-        <td>flyweight</td>
-        <td><span class="champ">flyweight champion</span></td>
-        <td>brandon moreno</td>
-      </tr>
-      <tr>
-        <td>10</td>
-        <td>jri prochazka</td>
-        <td>29-<span class="red">3</span>-1</td>
-        <td>13</td>
-        <td>light heavyweight</td>
-        <td><span class="champ">light heavyweight champion</span></td>
-        <td>glover teixeira</td>
-      </tr>
-    </table>
+    <div class="rankings-container">
+      <div class="filters">
+        <form>
+          <label>filter by wins:</label>
+          <input class="win-filter" min="0" max="50" value="0" type="range" />
+          <p>value: <output class="value">0</output></p>
+          <label>filter by losses:</label>
+          <input class="loss-filter" min="0" max="20" value="0" type="range" />
+          <p>value: <output class="value">0</output></p>
+          <label>filter by win streak:</label>
+          <input
+            class="win-streak-filter"
+            type="range"
+            value="0"
+            min="o"
+            max="30"
+          />
+          <p>value: <output class="value">0</output></p>
+          <label>champion:</label>
+          <input class="champion-filter" type="checkbox" />
+          <br />
+          <br />
+          <label>has next opponent:</label>
+          <input class="opponent-filter" type="checkbox" />
+        </form>
+        <button class="reset-filter">reset filter</button>
+      </div>
+      <table class="rankings">
+        <tr>
+          <th><span class="black">rank</span></th>
+          <th><span class="black">fighter</span></th>
+          <th><span class="black">record</span></th>
+          <th><span class="black">win streak</span></th>
+          <th><span class="black">weight class</span></th>
+          <th><span class="black">status</span></th>
+          <th><span class="black">next fight</span></th>
+        </tr>
+      </table>
+    </div>
     <div class="chat">
       <div class="chat-box">
         <div class="chat-header">

@@ -36,3 +36,89 @@ th {
   font-weight: bold;
   color: rgba(85, 85, 30, 0.867);
 }
+.rankings-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.filters {
+  margin: 3rem 1rem;
+  text-transform: capitalize;
+}
+.reset-filter {
+  font-size: 2rem;
+  font-weight: bold;
+  border: none;
+  background-color: rgba(36, 85, 218, 0.867);
+  color: #fff;
+  border-radius: 0.5rem;
+  margin: 1rem 0;
+}
+.reset-filter:hover {
+  cursor: pointer;
+  background-color: rgba(77, 116, 223, 0.867);
+}
+
+.rankings,
+td,
+th {
+  border: 1px solid #000;
+}
+.rankings {
+  width: min-content;
+  margin: 3rem auto;
+  text-transform: capitalize;
+  border-collapse: collapse;
+  text-align: center;
+}
+th {
+  background-color: #bbb;
+}
+.rankings tr:nth-child(odd) {
+  background-color: #ddd;
+}
+.rankings tr > :nth-child(2) {
+  color: rgba(36, 85, 218, 0.867);
+  font-weight: bold;
+}
+.rankings tr > :nth-child(4) {
+  color: rgba(28, 171, 9, 0.867);
+}
+.red {
+  color: rgb(236, 12, 12);
+}
+.black {
+  color: #000;
+  font-weight: bolder;
+}
+.n-c {
+  color: #a0a0a0;
+}
+.champ {
+  font-weight: bold;
+  color: rgb(172, 123, 2);
+}
+.blue {
+  font-weight: bold;
+  color: rgba(36, 85, 218, 0.867);
+}
+@media screen and (max-width: 1048px) {
+  .rankings-container {
+    display: block;
+  }
+  .rankings {
+    margin: 3rem 0;
+  }
+}
+@media screen and (max-width: 1048px) {
+  .rankings {
+    margin: 3rem auto;
+  }
+  .filters {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+  }
+}

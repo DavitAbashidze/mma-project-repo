@@ -31,7 +31,7 @@ th {
   border: none;
   height: 2rem;
   font-size: 1.125rem;
-  width: 60%;
+  min-width: 60%;
   border-radius: 0.5rem;
 }
 .ticket button:hover {

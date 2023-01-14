@@ -3,15 +3,34 @@ import "./utils/ticketsAndChat.js";
 import "./utils/dropdown.js";
 import "./utils/login.js";
 import "./utils/register.js";
+import "./utils/about.js";
+import "./utils/rankings.js";
 import fetchUser from "./utils/fetchRandomUser.js";
 import displayHuman from "./utils/displayHuman.js";
+import {
+  logOut,
+  hamburgerToggle,
+  smallNav,
+  smallLogOut,
+} from "./utils/domElements.js";
 
-// const navBtn = document.body.querySelector('.nav-btn');
-
-// const smallNav = document.body.querySelector('.small-nav');
-// navBtn.addEventListener('click', () => {
-//   smallNav.classList.toggle('display-flex');
-// });
+if (logOut) {
+  logOut.addEventListener("click", () => {
+    localStorage.setItem("logged-in", "false");
+    window.location.href = "../pages/landing.html";
+  });
+}
+if (smallLogOut) {
+  smallLogOut.addEventListener("click", () => {
+    localStorage.setItem("logged-in", "false");
+    window.location.href = "../pages/landing.html";
+  });
+}
+if (hamburgerToggle) {
+  hamburgerToggle.addEventListener("click", () => {
+    smallNav.classList.toggle("display-flex");
+  });
+}
 
 async function show() {
   let human = await fetchUser();

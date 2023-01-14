@@ -1,3 +1,4 @@
+Shalva Mishvelidze
 /*
 =============== 
 Global Styles
@@ -49,9 +50,24 @@ Global Classes
   font-weight: bold;
   letter-spacing: 0.1rem;
 }
+.log-out {
+  color: #000;
+  background: none;
+  border: none;
+  font-size: 1rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 0.5rem;
+  font-weight: bold;
+  letter-spacing: 0.1rem;
+  cursor: pointer;
+}
+.log-out:hover {
+  background-color: goldenrod;
+  color: #fff;
+}
 .big-screen-nav a:hover {
   background-color: goldenrod;
-  color: red;
   color: #fff;
 }
 .dropdown {
@@ -73,6 +89,59 @@ Global Classes
   cursor: pointer;
   background-color: goldenrod;
   color: #111;
+}
+.hamburger-toggle {
+  background: none;
+  border: none;
+  height: 5rem;
+  float: left;
+  padding: 0 1.5rem;
+  color: #222;
+  display: none;
+}
+.hamburger-toggle:hover {
+  background-color: goldenrod;
+}
+.hamburger-toggle .fa-bars {
+  font-size: 3rem;
+  transition: 1.2s;
+}
+.hamburger-toggle:hover .fa-bars {
+  color: #000;
+  rotate: 180deg;
+}
+.small-screen-nav {
+  background-color: goldenrod;
+  font-size: 1.325rem;
+  text-transform: capitalize;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding: 1rem 0;
+  display: none;
+}
+.small-screen-nav a {
+  text-decoration: none;
+  color: #000;
+  padding-left: 1rem;
+  width: 100%;
+}
+.small-screen-nav a:hover {
+  background-color: gold;
+}
+.log-out-small {
+  background: none;
+  border: none;
+  font-size: 1.335rem;
+  text-transform: capitalize;
+  text-align: left;
+  padding: 0;
+  padding-left: 1rem;
+  cursor: pointer;
+}
+.log-out-small:hover {
+  background-color: gold;
 }
 
 /* navbar end */
@@ -118,6 +187,7 @@ footer {
 /* footer end */
 
 /* chat */
+
 .fa-comment-dots {
   font-size: 2rem;
 }
@@ -129,34 +199,41 @@ footer {
   text-align: center;
   border-radius: 50%;
   color: rgb(28, 113, 170);
-}
-.chat {
   position: fixed;
-  top: 80vh;
-  right: 2vw;
-  display: flex;
+  top: 75vh;
+  right: 3rem;
+  z-index: 100;
 }
 .chat-icon:hover {
   color: #fff;
   background-color: rgb(28, 113, 170);
   cursor: pointer;
 }
-.chat-box {
-  width: 15rem;
-  height: 15.3rem;
-  background-color: #fff;
-  position: relative;
-  bottom: 5rem;
-  box-shadow: 0.5rem 1rem 3rem rgb(28, 113, 170);
+.chat {
   display: none;
-  cursor: pointer;
-  overflow: scroll;
-}
-.display-block {
-  display: block;
+  z-index: 100;
+  flex-direction: column;
+  position: fixed;
+  bottom: 0;
+  right: 7rem;
+  width: 15rem;
+  height: 20rem;
+  background-color: #fff;
+  box-shadow: 0.2rem 0.5rem 1rem rgb(28, 113, 170);
 }
 .chat-header {
-  background-color: #ddd;
+  background-color: gold;
+  box-shadow: 0px 2px 4px goldenrod;
+}
+.chat-header span {
+  position: relative;
+  bottom: 0.3rem;
+}
+.chat-box {
+  height: calc(100% - 1.4rem);
+  background-color: #fff;
+  cursor: pointer;
+  overflow-x: hidden;
 }
 .start-text {
   text-align: center;
@@ -180,21 +257,50 @@ footer {
 }
 .message-left {
   font-size: 0.815rem;
-  margin: 2rem 1rem 2rem;
+  margin: 1rem 0 0 1rem;
   background-color: rgb(28, 113, 170);
   color: #fff;
   padding: 0.2rem;
-  width: 8rem;
+  min-width: 1rem;
+  max-width: 10rem;
   border-radius: 0.5rem;
+  text-align: left;
+  display: block;
+}
+.msg-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 15rem;
+  align-content: flex-end;
+}
+.message-right {
+  font-size: 0.815rem;
+  margin: 1rem 1rem 0 auto;
+  background-color: rgb(19, 206, 38);
+  color: #fff;
+  padding: 0.2rem;
+  border-radius: 0.5rem;
+  float: right;
+  max-width: 10rem;
+  display: block;
 }
 .chat-footer {
-  position: absolute;
-  width: 100%;
-  bottom: 0%;
-  height: 1rem;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  flex-direction: row;
+  justify-content: center;
+  height: 1.4rem;
+}
+.chat-utils {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  width: 5rem;
+  color: rgb(28, 113, 170);
+  justify-content: space-evenly;
+  position: relative;
+  top: 0.1rem;
 }
 .chat-footer input {
   width: 7rem;
@@ -205,26 +311,18 @@ footer {
   border: none;
   color: rgb(28, 113, 170);
 }
-.chat-footer form {
-  margin: 0%;
-}
-.chat-utils {
-  width: 5rem;
-  color: rgb(28, 113, 170);
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-  position: relative;
-  top: 0.2rem;
-}
 .chat-footer i:hover {
   color: rgb(19, 206, 38);
   cursor: pointer;
 }
+
 /* chat end */
 
 .display-flex {
   display: flex;
+}
+.display-block {
+  display: block;
 }
 
 /*
@@ -239,28 +337,35 @@ Media Queries
 ===============
 */
 
-@media (max-width: 650px) {
-  .video-container {
-    grid-template-columns: 1fr;
+@media screen and (max-width: 768px) {
+  .big-screen-nav {
+    display: none;
   }
-  .video-container iframe {
-    width: 90vw;
-    height: 50.5vw;
-    margin: 0 auto;
+  .hamburger-toggle {
+    display: block;
   }
-}
-@media (max-width: 720px) {
-  /* eventually */
-}
-@media (max-width: 960px) {
-  .video-container {
-    grid-template-columns: 1fr 1fr;
-  }
-  .video-container iframe {
-    width: 48vw;
-    height: 27vw;
+  .footer-nav {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
   }
 }
+@media screen and (max-width: 480px) {
+  .footer-nav {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .chat {
+    width: 12rem;
+    height: 15rem;
+    bottom: 1rem;
+  }
+  .chat input {
+    width: 4.5rem;
+  }
+}
+/* 
+  @media screen and (max-width: 320px) { */
+
 /*
 =============== 
 Media Queries

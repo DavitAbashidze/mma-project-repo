@@ -18,8 +18,25 @@ td {
 }
 .event th {
   margin: 0;
-  min-width: 6rem;
+  width: 6rem;
+}
+.event table th:nth-child(5) {
+  width: 15rem;
 }
 .block {
   display: block;
+}
+@media screen and (max-width: 768px) {
+  .event img {
+    width: 20vw;
+  }
+}
+@media screen and (max-width: 480px) {
+  .event th {
+    width: 4rem;
+    font-size: 0.5rem;
+  }
+  .event table th:nth-child(5) {
+    width: 5rem;
+  }
 }

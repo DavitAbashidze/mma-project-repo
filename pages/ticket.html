@@ -1,8 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <script>
+      const loggedIn = JSON.parse(localStorage.getItem("logged-in"));
+      if (!loggedIn) {
+        window.location.href = "./landing.html";
+      }
+    </script>
+
     <link rel="stylesheet" href="../style.css" />
-    <link rel="stylesheet" href="../css/ticket.css" />
+    <link rel="stylesheet" href="../css/tickets.css" />
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -27,34 +34,53 @@
             ><button>light heavyweight</button><button>heavyweight</button>
           </div>
         </a>
-        <a href="./ticket.html">ticket</a>
+        <a href="./ticket.html">tickets</a>
         <a href="./events.html">events</a>
         <a href="./about.html">about</a>
         <a href="./contact.html">contact</a>
+        <button class="log-out">log out</button>
       </div>
-      <!-- <div class="small-nav-container">
-        <button class="nav-btn"><i class="fa-solid fa-bars"></i></button>
-        <i class="fa-solid fa-magnifying-glass"></i>
-        <div class="small-nav">
-          <a href="./index.html">home</a>
-          <a class="dropdown-trigger" href="./chat.html">
-            rankings
-            <i style="display: none" class="fa-solid fa-chevron-up"></i
-            ><i class="fa-solid fa-chevron-down"></i
-          ></a>
-          <a href="./shops.html">ticket</a>
-          <a href="./slider.html">events</a>
-          <a href="./about.html">about</a>
-          <a href="./contact.html">contact</a>
-        </div>
-      </div> -->
-      <!-- <form>
-        <input type="text" placeholder="Search..." />
-        <button class="search-btn" type="submit">
-          <i class="fa-solid fa-magnifying-glass"></i>
-        </button>
-      </form> -->
+      <button class="hamburger-toggle"><i class="fas fa-bars"></i></button>
     </nav>
+    <div class="small-screen-nav">
+      <a href="./index.html">home</a>
+      <a href="./rankings.html">rankings</a>
+      <a href="./ticket.html">tickets</a>
+      <a href="./events.html">events</a>
+      <a href="./about.html">about</a>
+      <a href="./contact.html">contact</a>
+      <button class="log-out-small">log out</button>
+    </div>
+    <div class="chat-icon">
+      <i class="fa-regular fa-comment-dots"></i>
+    </div>
+    <div class="chat">
+      <div class="chat-header">
+        <i class="fa-regular fa-comment-dots" style="margin: 0.5rem 0.5rem"></i>
+        <span>MMA Website</span>
+      </div>
+      <div class="chat-box">
+        <p class="start-text">
+          Your messaging history with MMA Website starts here!
+        </p>
+        <div class="wave"><i class="fa-solid fa-hand"></i></div>
+        <p class="message-left">Hello! How can I help you?</p>
+      </div>
+
+      <div class="chat-footer">
+        <div class="chat-utils">
+          <i class="fa-solid fa-circle-plus"></i>
+          <i class="fa-solid fa-image"></i>
+          <i class="fa-solid fa-face-smile"></i>
+        </div>
+        <form>
+          <input class="message-input" type="text" />
+          <button class="send-message" type="submit">
+            <i class="fa-solid fa-paper-plane"></i>
+          </button>
+        </form>
+      </div>
+    </div>
     <table class="ticket">
       <th>date</th>
       <th>time</th>
@@ -89,39 +115,6 @@
         </td>
       </tr>
     </table>
-    <div class="chat">
-      <div class="chat-box">
-        <div class="chat-header">
-          <i
-            class="fa-regular fa-comment-dots"
-            style="margin: 0.5rem 0.5rem"
-          ></i>
-          <span>MMA Website</span>
-        </div>
-        <p class="start-text">
-          Your messaging history with MMA Website starts here!
-        </p>
-        <div class="wave"><i class="fa-solid fa-hand"></i></div>
-
-        <p class="message-left">Hello! How can I help you?</p>
-        <div class="chat-footer">
-          <div class="chat-utils">
-            <i class="fa-solid fa-circle-plus"></i>
-            <i class="fa-solid fa-image"></i>
-            <i class="fa-solid fa-face-smile"></i>
-          </div>
-          <form>
-            <input type="text" />
-            <button type="submit">
-              <i class="fa-solid fa-paper-plane"></i>
-            </button>
-          </form>
-        </div>
-      </div>
-      <div class="chat-icon">
-        <i class="fa-regular fa-comment-dots"></i>
-      </div>
-    </div>
     <footer>
       <div class="footer-nav">
         <a href="./index.html">home</a>

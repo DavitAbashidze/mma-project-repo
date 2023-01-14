@@ -1,91 +1,92 @@
 import {
   registerShowHide,
-  registerPassword,
-  agreement,
-  recieveEmail,
-  emptyInputWarning,
-  warning,
-  confirm,
-  registerName,
+  registerBtn,
   registerMail,
   registerForm,
-  registerBtn,
+  registerPassword,
+  registerName,
+  registerConfirm,
+  reginsterAgreement,
+  registerRecieveEmails,
+  registerWarning,
+  registerEmptyInputWarning,
 } from "./domElements.js";
 
-if (registerShowHide && registerPassword) {
+if (registerShowHide) {
   registerShowHide.addEventListener("click", () => {
     if (registerPassword.type === "password") {
       registerPassword.type = "text";
-      confirm.type = "text";
+      registerConfirm.type = "text";
     } else {
       registerPassword.type = "password";
-      confirm.type = "password";
+      registerConfirm.type = "password";
     }
   });
 
-  let user = {
+  const user = {
     name: "",
-    login: "",
+    mail: "",
     password: "",
-    confirmPassword: "",
-    userAgreement: false,
-    userRecieveEmail: false,
+    repeatPassword: "",
+    agreement: false,
+    recieveEmails: false,
   };
   registerName.addEventListener("input", (e) => {
     user.name = e.target.value;
   });
   registerMail.addEventListener("input", (e) => {
-    user.login = e.target.value;
+    user.mail = e.target.value;
   });
   registerPassword.addEventListener("input", (e) => {
     user.password = e.target.value;
   });
-  confirm.addEventListener("input", (e) => {
-    user.confirmPassword = e.target.value;
+  registerConfirm.addEventListener("input", (e) => {
+    user.repeatPassword = e.target.value;
   });
-  agreement.addEventListener("click", () => {
-    user.userAgreement = true;
+  reginsterAgreement.addEventListener("click", () => {
+    user.agreement = !user.agreement;
   });
-  recieveEmail.addEventListener("click", () => {
-    user.userRecieveEmail = !user.userRecieveEmail;
+  registerRecieveEmails.addEventListener("click", () => {
+    user.recieveEmails = !user.recieveEmails;
   });
   registerForm.addEventListener("submit", (e) => {
     e.preventDefault();
   });
-  registerBtn.addEventListener("click", () => {
-    if (user.password !== user.confirmPassword) {
-      warning.classList.add("block");
+
+  registerBtn.addEventListener("click", (e) => {
+    e.preventDefault();
+    if (user.password !== user.repeatPassword) {
+      registerWarning.classList.add("block");
     } else {
-      warning.classList.remove("block");
+      registerWarning.classList.remove("block");
       if (
+        !user.agreement ||
+        !user.mail ||
         !user.name ||
-        !user.login ||
-        !user.confirmPassword ||
         !user.password ||
-        !user.userAgreement ||
-        !user.userRecieveEmail
+        !user.repeatPassword ||
+        !user.recieveEmails
       ) {
+        if (!user.agreement) {
+          registerEmptyInputWarning.textContent =
+            "you need to agree to user agreement";
+        }
+        if (!user.mail) {
+          registerEmptyInputWarning.textContent =
+            "you need to enter your email";
+        }
         if (!user.name) {
-          emptyInputWarning.textContent = "please write your name!";
+          registerEmptyInputWarning.textContent = "you need to enter your name";
         }
-        if (!user.login) {
-          emptyInputWarning.textContent = "please write your login!";
+        if (!user.password && !user.repeatPassword) {
+          registerEmptyInputWarning.textContent =
+            "you need to enter your password";
         }
-        if (!user.password) {
-          emptyInputWarning.textContent = "please write your password!";
-        }
-        if (!user.confirmPassword) {
-          emptyInputWarning.textContent = "please confirm your password! ";
-        }
-        if (!user.userAgreement) {
-          emptyInputWarning.textContent =
-            "you need to agree to the user agreement!";
-        }
-        if (!user.userRecieveEmail) {
-          emptyInputWarning.textContent = "you need to recieve emails!";
+        if (!user.recieveEmails) {
+          registerEmptyInputWarning.textContent =
+            "you need to agree to recieve emails";
         }
       } else {
-        emptyInputWarning.textContent = "";
         let localUsers = JSON.parse(localStorage.getItem("users"));
         let users = [];
         if (!localUsers) {
@@ -94,11 +95,13 @@ if (registerShowHide && registerPassword) {
           localStorage.setItem("logged-in", "true");
           window.location.href = "/pages/index.html";
         } else if (
-          localUsers.some((localUser) => {
-            return localUser.login === user.login;
-          })
+          localUsers.some(
+            (localUser) =>
+              localUser.mail === user.mail &&
+              localUser.password === user.password
+          )
         ) {
-          emptyInputWarning.textContent = "user already exist!";
+          registerEmptyInputWarning.textContent = "user already exists";
         } else {
           users = [...JSON.parse(localStorage.getItem("users")), user];
           localStorage.setItem("users", JSON.stringify(users));

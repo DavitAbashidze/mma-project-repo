@@ -15,12 +15,12 @@ if (loginShowHide) {
       loginPassword.type = "password";
     }
   });
-  const user = { login: "", password: "" };
+  const user = { mail: "", password: "" };
   loginForm.addEventListener("submit", () => {
     e.preventDefault();
   });
   loginMail.addEventListener("input", (e) => {
-    user.login = e.target.value;
+    user.mail = e.target.value;
   });
   loginPassword.addEventListener("input", (e) => {
     user.password = e.target.value;
@@ -31,7 +31,7 @@ if (loginShowHide) {
     const users = [...JSON.parse(localStorage.getItem("users"))];
     const userExists = users.some((localUser) => {
       return (
-        localUser.login === user.login && localUser.password === user.password
+        localUser.mail === user.mail && localUser.password === user.password
       );
     });
     if (!userExists) {

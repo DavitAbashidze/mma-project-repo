@@ -10,3 +10,23 @@
   font-family: cursive;
   background-color: #ffe128;
 }
+.accordion {
+  text-align: left;
+}
+.accordion h2 {
+  text-transform: capitalize;
+  width: 100%s;
+}
+.accordion p {
+  display: none;
+  background: none;
+}
+.accordion button {
+  background: #fff;
+  border-radius: 4px;
+  position: relative;
+  bottom: 0.25rem;
+}
+.display-block {
+  display: block;
+}

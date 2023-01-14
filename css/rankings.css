@@ -1,41 +1,3 @@
-.rankings,
-td,
-th {
-  border: 1px solid #000;
-}
-.rankings {
-  width: 80%;
-  margin: 3rem auto;
-  text-transform: capitalize;
-  border-collapse: collapse;
-  text-align: center;
-}
-th {
-  background-color: #bbb;
-}
-.rankings tr:nth-child(odd) {
-  background-color: #ddd;
-}
-.rankings tr > :nth-child(2) {
-  color: rgba(36, 85, 218, 0.867);
-  font-weight: bold;
-}
-.rankings tr > :nth-child(4) {
-  color: rgba(28, 171, 9, 0.867);
-}
-.red {
-  color: rgb(236, 12, 12);
-}
-.black {
-  color: #000;
-}
-.n-c {
-  color: #a0a0a0;
-}
-.champ {
-  font-weight: bold;
-  color: rgba(85, 85, 30, 0.867);
-}
 .rankings-container {
   display: flex;
   flex-direction: row;
@@ -46,7 +8,7 @@ th {
   margin: 3rem 1rem;
   text-transform: capitalize;
 }
-.reset-filter {
+.reset-filters {
   font-size: 2rem;
   font-weight: bold;
   border: none;
@@ -55,7 +17,7 @@ th {
   border-radius: 0.5rem;
   margin: 1rem 0;
 }
-.reset-filter:hover {
+.reset-filters:hover {
   cursor: pointer;
   background-color: rgba(77, 116, 223, 0.867);
 }

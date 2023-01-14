@@ -12,28 +12,33 @@
       <div class="section-center">
         <form class="register-form">
           <div class="text-inputs">
-            <input class="register-name" placeholder="   name" type="text" />
-            <input class="register-mail" type="email" placeholder="   login" />
+            <input type="text" class="register-name" placeholder="  name" />
+            <input class="register-mail" type="email" placeholder="  login" />
             <input
               class="register-password"
               type="password"
-              placeholder="   password"
+              placeholder="  password"
             />
             <input
               class="confirm-password"
-              placeholder="   confirm password"
               type="password"
+              placeholder="  repeat password"
             />
           </div>
           <div class="check-inputs">
             <p class="warning">password doesn't match!</p>
             <input class="register-show-hide" type="checkbox" />
             <label>show password</label>
-            <br />
-            <input type="radio" name="agreement" id="agreement" />
-            <label for="agreement">user agreement</label>
-            <input type="checkbox" name="recieve-emails" id="recieve-emails" />
-            <label for="recieve-emails">recieve emails</label>
+            <div class="register-footer">
+              <input type="radio" name="agreement" id="agreement" />
+              <label for="agreement">I agree to user agreement</label>
+              <input
+                type="checkbox"
+                name="recieve-emails"
+                id="recieve-emails"
+              />
+              <label for="recieve-emails">Recieve emails</label>
+            </div>
           </div>
           <button class="register-btn" type="submit">Register</button>
         </form>
